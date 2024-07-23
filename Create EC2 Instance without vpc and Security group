@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "myec2" {
-    ami = "ami-01fccab91b456acc2"
+    ami = "ami-01fccab91b456acc2" #change ami according to your project
     instance_type = "t2.micro"
     
     tags = {
