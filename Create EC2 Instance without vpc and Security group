@@ -1,0 +1,14 @@
+provider "aws" {
+  region     = "us-east-1"
+  access_key = "AKIAYNYTAGXMJGOGRX4W"
+  secret_key = "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"
+}
+
+resource "aws_instance" "myec2" {
+    ami = "ami-01fccab91b456acc2"
+    instance_type = "t2.micro"
+    
+    tags = {
+        Name = "ec2-created-from-terraform"
+    }
+}
